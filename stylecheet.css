@@ -1,0 +1,240 @@
+.contentSizeNav {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+a {
+  display: flex;
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+  justify-content: center;
+  align-items: center;
+}
+.logoContainer {
+  display: flex;
+  padding-left: 12px;
+  justify-content: center;
+  align-items: center;
+}
+.logoContainer img {
+  width: 32px;
+  height: 32px;
+  margin-left: 12px;
+}
+
+#mainContainer,
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.disabled {
+  filter: grayscale(100%);
+  pointer-events: none;
+  opacity: 0.6;
+}
+/* Cards */
+.card-img-top {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.type {
+  width: 80px;
+  height: auto;
+}
+
+.typImg {
+  display: flex;
+  margin: 10px;
+  height: 74.659px;
+  flex-direction: column;
+}
+.typImg img {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.custom-card {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: rgb(255, 225, 101);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.header h5 {
+  font-size: clamp(1rem, 1vw, 2.5rem);
+  white-space: nowrap;
+}
+
+.pokemon {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.containerImg {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+}
+.containerImg img:hover {
+  transform: scale(1.2);
+}
+
+.custom-card .card-body {
+  padding: 10px;
+}
+
+.closeContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-close {
+  margin: 2px;
+}
+.card-body p {
+  font-size: 0.8em;
+}
+
+.card-body ul li:nth-child(2n) {
+  height: 75px;
+  overflow: auto;
+}
+.closeContainer {
+  flex-direction: column;
+  justify-content: center;
+}
+/* Bigcart */
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(255, 225, 101);
+}
+.closeContainer {
+  background-color: rgb(255, 225, 101);
+}
+.bigCardContainer {
+  margin-left: 26px;
+  margin-right: 26px;
+  margin-bottom: 26px;
+}
+h6 {
+  margin-bottom: 10px;
+}
+
+.bigCardInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.bigCardInfo h5 {
+  margin: 0;
+}
+
+.bigCardContainer p {
+  padding-right: 5px;
+}
+.power {
+  margin-left: 10px;
+}
+.card-body li {
+  display: flex;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.arrow {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.arrow img:hover {
+  cursor: pointer;
+}
+
+.show {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonContainer button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nothingFoundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* LoadingSpinner */
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.spinner {
+  width: 60%;
+  height: auto;
+  animation: spin 1s linear infinite; /* Animation zum Drehen des Bildes */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .type {
+    width: 70px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .container-fluid {
+    padding-left: 12px;
+
+    justify-content: center !important;
+  }
+
+  .bigCardInfo img {
+    width: 70px;
+  }
+}
+
+@media only screen and (max-width: 574px) {
+  .type {
+    width: 60px;
+  }
+}

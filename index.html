@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_package_v0.16/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_package_v0.16/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon_package_v0.16/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon_package_v0.16/android-chrome-192x192.png">
+  <link rel="manifest" href="./favicon_package_v0.16/site.webmanifest">
+  <link rel="mask-icon" href="./favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="./bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./stylecheet.css">
+  <link rel="stylesheet" type="text/css" href="./typeColors.css">
+  <script src="./bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  <script src="./script.js"></script>
+  <script src="./template.js"></script>
+  <script src="./navigation.js"></script>
+  <script src="./filter.js"></script>
+
+</head>
+
+<body onload="init()">
+
+  <div id="loadingSpinner" class="spinner-container">
+    <img src="./img/pokemon-1536849_1280.png" alt="Loading Spinner" class="spinner">
+  </div>
+
+  <!-- Nav -->
+  <nav class="navbar bg-body-tertiary">
+
+
+    <div class="container-fluid pagination contentSizeNav">
+
+      <div class="logoContainer">
+        <a href="./index.html">
+          <h1>Pokedex</h1>
+          <img src="./favicon_package_v0.16/favicon-32x32.png" alt="">
+      </div>
+      </a>
+      <input id="Search" class="" type="text" placeholder="Search">
+    </div>
+
+
+    </div>
+
+  </nav>
+
+  <!-- Main -->
+  <div class="container mt-4">
+    <div id="mainContainer" class="row ">
+    </div>
+  </div>
+  <div class="container mt-4">
+    <div id="mainContainerSearch" class="row hidden">
+    </div>
+  </div>
+
+
+
+
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div id="closeContainer" class="closeContainer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to
+            first</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="buttonContainer">
+    <button onclick="renderMore()" class="btn btn-primary button hidden" id="seeMore">See More</button>
+    <button onclick="backBtnClick ()" class="btn btn-primary hidden" id="backButton">Back</button>
+
+
+  </div>
+
+</body>
+
+</html>
