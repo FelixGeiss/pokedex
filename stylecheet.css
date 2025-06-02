@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "pressStar";
+  src: url("/fonts/PressStart2P-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --press-star: "pressStar", Arial, Helvetica, sans-serif;
+}
+
 body {
   background-image: url("./img/ChatGPT Image 30. Mai 2025, 18_24_45.png");
   background-size: cover;
@@ -5,12 +16,15 @@ body {
   height: 100vh;
 }
 
+.card-title {
+  font-family: var(--press-star);
+}
 .contentSizeNav {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
-.navbar{
+.navbar {
   background-color: red !important ;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -20,7 +34,7 @@ body {
 }
 
 .mt-6 {
-  margin-top: 80px; 
+  margin-top: 80px;
 }
 .margin {
   margin-left: 0 !important;
@@ -91,10 +105,6 @@ ul {
   display: flex;
   justify-content: space-between;
   margin: 10px;
-}
-.header h5 {
-  font-size: clamp(1rem, 1vw, 2.5rem);
-  white-space: nowrap;
 }
 
 .pokemon {
@@ -202,8 +212,8 @@ h6 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-button{
-   background-color: red !important
+#seeMore {
+  background-color: red !important;
 }
 .nothingFoundContainer {
   display: flex;
@@ -225,7 +235,7 @@ button{
 .spinner {
   width: 60%;
   height: auto;
-  animation: spin 1s linear infinite; /* Animation zum Drehen des Bildes */
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {

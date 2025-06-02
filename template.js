@@ -3,9 +3,9 @@ function mainContent(index, main, pokemonData) {
     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
       <div class="card custom-card">
         <div class="${pokemonData.type1} contentSize">
-          <div class="header">
-            <h5 class="card-title">${pokemonData.name}</h5>
-            <h5 class="card-title">#${pokemonData.id}</h5>
+          <div class="header  text-start">
+            <h5 class="card-title fs-6 text-break">${pokemonData.name}</h5>
+            <h5 class="card-title fs-6 ms-1">#${pokemonData.id}</h5>
           </div>
           <div class="typImg">
             <img src="${
