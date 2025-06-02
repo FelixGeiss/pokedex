@@ -1,9 +1,27 @@
+body {
+  background-image: url("./img/ChatGPT Image 30. Mai 2025, 18_24_45.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
 .contentSizeNav {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
+.navbar{
+  background-color: red !important ;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+}
 
+.mt-6 {
+  margin-top: 80px; 
+}
 .margin {
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -184,7 +202,9 @@ h6 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
+button{
+   background-color: red !important
+}
 .nothingFoundContainer {
   display: flex;
   justify-content: center;
