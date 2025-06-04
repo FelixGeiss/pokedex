@@ -236,3 +236,8 @@ function backBtnClick() {
   searchIndex = false;
   toggleMain();
 }
+
+function playCry(id) {
+  const audio = document.getElementById(`pokemonCry${id}`);
+  audio.play();
+}

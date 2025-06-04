@@ -67,9 +67,11 @@ function bigCard(index, pokemonData, bigCardData, card) {
     } bigCardContainer">
       <div class="${pokemonData.type1 ?? "Unknown"} contentSize">
         <div class="header">
-          <h1 class="card-title">${pokemonData.name ?? "Nameless"}</h1>
-          <h1 class="card-title">#${pokemonData.id ?? "00"}</h1>
+          <h1 class="card-title text-break fs-3">${pokemonData.name ?? "Nameless"}</h1>
+          <h1 class="card-title ms-2 fs-3">#${pokemonData.id ?? "00"}</h1>
         </div>
+       <div class="play-icon"><img onclick="playCry(${pokemonData.id})" src="/img/play-button.png" alt=""></div>
+        <audio id="pokemonCry${pokemonData.id}" src="https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${pokemonData.id}.ogg"></audio>
       </div>
       <img id="frond" src="${
         pokemonData.imgFrond ?? "./img/istockphoto-1530149386-612x612.jpg"
