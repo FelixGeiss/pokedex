@@ -47,17 +47,6 @@ function displayPokemon(pokemonData, index) {
   mainContent(index, main, pokemonData);
 }
 
-async function loadPokemonData(index) {
-  const name = pokemons[index].name;
-  const pokeData = await fetchPokeData(`/pokemon/${name}`);
-  const id = pokeData.id;
-  const imgFrond = pokeData.sprites.front_default;
-
-  const { type1, type2 } = extractPokemonTypes(pokeData);
-  const { typeImg1, typeImg2 } = await loadTypeImages(type1, type2);
-
-  return { id, imgFrond, type1, type2, typeImg1, typeImg2, name };
-}
 
 function extractPokemonTypes(pokeData) {
   const types = pokeData.types.map((t) => t.type.name);
@@ -79,11 +68,15 @@ async function loadPokemonData(index) {
 
   const types = pokeData.types.map((t) => t.type.name);
   const [type1, type2] = types;
+  const height = pokeData.height;
+  const weight = pokeData.weight;
+
+  const base_experience = pokeData.base_experience;
 
   const typeImg1 = await loadTypeImage(type1);
   const typeImg2 = type2 ? await loadTypeImage(type2) : null;
 
-  return { id, imgFrond, type1, type2, typeImg1, typeImg2, name };
+  return { id, imgFrond, type1, type2, typeImg1, typeImg2, name ,height,weight,base_experience};
 }
 
 async function loadPokemonGeneralData(index) {

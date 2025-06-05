@@ -107,6 +107,7 @@ ul {
   margin-bottom: 20px;
   padding: 10px;
   background-color: rgb(255, 225, 101);
+ 
 }
 .header {
   display: flex;
@@ -145,13 +146,24 @@ ul {
 
 .card-body ul li:nth-child(2n) {
   height: 75px;
-  overflow: auto;
 }
 .closeContainer {
   flex-direction: column;
   justify-content: center;
 }
 /* Bigcart */
+.tab-pane span{
+  font-family: var(--open-sans);
+}
+.nav-tabs .nav-link {
+  color: black !important;
+  font-family: var(--open-sans);
+}
+
+.nav-tabs .nav-link.active {
+  color: black !important;
+}
+
 .play-icon {
   margin: 0 10px;
 }
@@ -160,7 +172,7 @@ ul {
   width: 32px;
 }
 
-.play-icon img:hover{
+.play-icon img:hover {
   cursor: pointer;
 }
 .close {
@@ -170,16 +182,17 @@ ul {
 }
 .closeContainer {
   background-color: rgb(255, 225, 101);
+ height: 800px;
 }
 .bigCardContainer {
   margin-left: 26px;
   margin-right: 26px;
   margin-bottom: 26px;
+  height: 100%;
 }
 h6 {
   margin-bottom: 10px;
 }
-
 .bigCardInfo {
   display: flex;
   justify-content: space-between;
@@ -264,6 +277,9 @@ h6 {
   }
 }
 @media only screen and (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
   .type {
     width: 70px;
   }
@@ -281,6 +297,13 @@ h6 {
 }
 
 @media only screen and (max-width: 574px) {
+  html {
+    font-size: 16px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
   .type {
     width: 60px;
   }

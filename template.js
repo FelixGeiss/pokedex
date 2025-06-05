@@ -64,13 +64,13 @@ function bigCard(index, pokemonData, bigCardData, card) {
 
     <div class="card custom-card ${
       pokemonData.type1 ?? "Unknown"
-    } bigCardContainer">
+    } bigCardContainer overflow-hidden">
       <div class="${pokemonData.type1 ?? "Unknown"} contentSize">
         <div class="header">
           <h1 class="card-title text-break fs-3">${pokemonData.name ?? "Nameless"}</h1>
           <h1 class="card-title ms-2 fs-3">#${pokemonData.id ?? "00"}</h1>
         </div>
-       <div class="play-icon"><img onclick="playCry(${pokemonData.id})" src="/img/play-button.png" alt=""></div>
+       <div class="play-icon"><img onclick="playCry(${pokemonData.id})" src="img/volumen.png" alt=""></div>
         <audio id="pokemonCry${pokemonData.id}" src="https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${pokemonData.id}.ogg"></audio>
       </div>
       <img id="frond" src="${
@@ -87,7 +87,18 @@ function bigCard(index, pokemonData, bigCardData, card) {
           <img id ="arrowTurn" onclick="togglePokemonVisibility()" src="./img/ruckgangig-machen.png">
           <img id="arrowRight" src="./img/rechter-pfeil.png" onclick="findNextHigherIndex(${index})">
         </div>
-        <div class="bigCardInfo">
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="stats-tab" data-bs-toggle="tab" data-bs-target="#stats-tab-pane" type="button" role="tab" aria-controls="stats-tab-pane" aria-selected="false">Stats</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+          <div class="bigCardInfo">
           <h5 class="card-title">HP ${bigCardData.hp ?? "00"}</h5>
           <div class="typeBigCard">
             <img src="${
@@ -104,17 +115,20 @@ function bigCard(index, pokemonData, bigCardData, card) {
             <h6 class="power">Power ${bigCardData.power1 ?? 0}</h6>
           </li>
           <li>
-            <p class="card-text">${bigCardData.effekt1 ?? "Unknown"}</p>
-          </li>
-          <li>
-            <h6>${bigCardData.moveName2 ?? "Unknown"}</h6>
-            <h6 class="power">Power ${bigCardData.power2 ?? 0}</h6>
-          </li>
-          <li>
-            <p class="card-text">${bigCardData.effekt2 ?? "Unknown"}</p>
+            <p class="card-text overflow-y-auto">${bigCardData.effekt1 ?? "Unknown"}</p>
           </li>
         </ul>
       </div>
     </div>
+  
+  <div class="tab-pane fade mt-4" id="stats-tab-pane" role="tabpanel" aria-labelledby="stats-tab" tabindex="0">
+<div class="mt-2">Height: ${pokemonData.height} dm</div>
+<div class="mt-2">Weight: ${pokemonData.weight} hg</div>
+<div class="mt-2">Base Experience: ${pokemonData.base_experience} EP</div>
+
+</div>
+  
+  </div>
+
   `;
 }
