@@ -220,7 +220,7 @@ h6 {
 .arrow {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .arrow img:hover {
   cursor: pointer;
@@ -242,7 +242,7 @@ h6 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-#seeMore {
+#seeMore,#backButton{
   background-color: red !important;
 }
 .nothingFoundContainer {

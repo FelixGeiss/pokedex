@@ -92,7 +92,7 @@ function bigCard(index, pokemonData, bigCardData, card) {
   <li class="nav-item" role="presentation">
     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
   </li>
-  <li class="nav-item" role="presentation">
+  <li class="nav-item ms-3" role="presentation">
     <button class="nav-link" id="stats-tab" data-bs-toggle="tab" data-bs-target="#stats-tab-pane" type="button" role="tab" aria-controls="stats-tab-pane" aria-selected="false">Stats</button>
   </li>
 </ul>
